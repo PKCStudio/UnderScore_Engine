@@ -26,7 +26,6 @@ namespace UnderScore::Engine::Logger
 	void USLogger::logDebug(const char* warningTxt)
 	{
 		this->logText(warningTxt, USLoggerTypes::Debug);
-
 	}
 
 	void write(std::string txt)
@@ -37,7 +36,7 @@ namespace UnderScore::Engine::Logger
 		}
 
 		auto pathLog = path + "log_" + UnderScore::Engine::Helpers::USHelper_GetCurrentDate() + ".txt";
-		const char* logPath = path.c_str();
+		const char* logPath = pathLog.c_str();
 		std::fstream logFile = std::fstream(logPath, std::ios::app);
 		logFile << txt;
 		logFile.close();

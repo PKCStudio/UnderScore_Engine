@@ -1,4 +1,0 @@
-24_04_21 23:46:59 Debug: Tedst
-24_04_21 23:48:37 Debug: Tedst
-25_04_21 00:01:52 Debug: Tedst
-25_04_21 00:03:50 Debug: Tedst
