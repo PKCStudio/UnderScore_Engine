@@ -1,5 +1,8 @@
 #include <fstream>
 #include <filesystem>
+#include <thread>
+#include <string>
+
 #include "USLoggerTypes.h"
 #include "../USHelpers/USHelpers.h"
 
