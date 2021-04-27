@@ -1,13 +1,16 @@
 #include <SDL2/SDL.h>
 #include <iostream>
-#include <SDL_image.h>
+#include <SDL_Image/include/SDL_image.h>
 
 #include "../USLogger/USLogger.h"
+
+#ifndef NSGLWindow_HEADER
+#define NSGLWindow_HEADER
 
 namespace UnderScore::Engine::Window
 {
 
-	class NSGLWindow 
+	class NSGLWindow
 	{
 	public: 
 		SDL_Window* window;
@@ -19,6 +22,5 @@ namespace UnderScore::Engine::Window
 	extern NSGLWindow USWindow_CreateOpenGLWindow(const char* title, int w, int h);
 
 	extern SDL_Surface* USWindow_LoadSDLIcon(const char* iconPath);
-
-
 }
+#endif

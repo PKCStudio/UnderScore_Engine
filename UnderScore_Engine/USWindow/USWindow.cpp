@@ -6,7 +6,7 @@ namespace UnderScore::Engine::Window
 	{
 		// Create an SDL window that supports Vulkan rendering.
 		if (SDL_Init(SDL_INIT_VIDEO) != 0) {
-			std::cout << "Could not initialize SDL." << std::endl;
+			UnderScore::Engine::Logger::USLogger::GetInstance().logError("Could not initialize SDL.");
 			throw; //TODO: Fix that
 		}
 
@@ -14,7 +14,7 @@ namespace UnderScore::Engine::Window
 
 		SDL_Window* window = SDL_CreateWindow(title, SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, w, h, windowFlags);
 		if (window == NULL) {
-			std::cout << "Could not create SDL window." << std::endl;
+			UnderScore::Engine::Logger::USLogger::GetInstance().logError("Could not create SDL window.");
 			throw; //TODO: Fix that
 		}
 

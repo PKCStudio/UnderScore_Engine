@@ -6,7 +6,8 @@
 #include "USLoggerTypes.h"
 #include "../USHelpers/USHelpers.h"
 
-
+#ifndef USLogger_HEADER
+#define USLogger_HEADER
 namespace UnderScore::Engine::Logger
 {
 	class USLogger
@@ -25,8 +26,6 @@ namespace UnderScore::Engine::Logger
 		void logText(const char* txt, USLoggerTypes type);
 	};
 
-
-
-
 }
 
+#endif
